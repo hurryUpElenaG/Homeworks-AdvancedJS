@@ -65,7 +65,7 @@ addReminderButton.addEventListener("click", function () {
 
 
 //1st way
-showReminderButton.addEventListener("click", () => {
+showReminderButton.addEventListener("click", function () {
   let container = document.getElementById("reminderTableContainer");
   container.innerHTML = ""; // clear old table
 
