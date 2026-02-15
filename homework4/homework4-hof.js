@@ -36,13 +36,15 @@ let products = [
 //1.
 let productsWithPriceGreaterThan20  = products
   .filter(product  => product.price > 20);
-productsWithPriceGreaterThan20.forEach(pr => console.log(pr));
+console.log(productsWithPriceGreaterThan20);
+//productsWithPriceGreaterThan20.forEach(pr => console.log(pr));
 
 //2.
 let productsOnDiscount = products
   .filter(product => product.category === "Food" && product.hasDiscount == true)
   .map(pr => pr.name);
-productsOnDiscount.forEach(name => console.log(name));
+console.log(productsOnDiscount);
+//productsOnDiscount.forEach(name => console.log(name));
 
 /*let productsOnDiscount = products
   .filter(product => product.category === "Food" && product.hasDiscount == true)
@@ -52,20 +54,23 @@ productsOnDiscount.forEach(name => console.log(name));
 //3.
 let priceOfProducstOnDiscount = products.filter(product => product.hasDiscount == true)
                                         .map(product => product.price);
-priceOfProducstOnDiscount.forEach(price => console.log(price));
+console.log(priceOfProducstOnDiscount);                                       
+//priceOfProducstOnDiscount.forEach(price => console.log(price));
 
 
 //4. 1st way
 let productNameStartingWithVowel = products.filter(product => product.name.match(/^[AEIOUaeiou]/) && product.hasDiscount == false)
                                            .map(pr =>({name: pr.name, price: pr.price}));
-productNameStartingWithVowel.forEach(namePrice  => console.log(namePrice));
+console.log(productNameStartingWithVowel);                                     
+//productNameStartingWithVowel.forEach(namePrice  => console.log(namePrice));
                                     
 //2nd way
 /*let vowels = ['a', 'e', 'i', 'o', 'u'];
 let productNameStartingWithVowel = products
                .filter(product => vowels.includes(product.name[0].toLowerCase()) && product.hasDiscount == false)
-               .map(pr =>({name: pr.name, price: pr.price}));  
-productNameStartingWithVowel.forEach(namePrice => console.log(namePrice));  */                             
+               .map(pr =>({name: pr.name, price: pr.price})); 
+console.log(productNameStartingWithVowel);  
+//productNameStartingWithVowel.forEach(namePrice => console.log(namePrice));  */                             
 
 
 
