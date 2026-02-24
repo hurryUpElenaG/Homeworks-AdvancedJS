@@ -18,7 +18,7 @@ button.addEventListener("click", async () => {
     let firstTen = data.results.filter((pokemon, index) => index < 10);
 
     // Fetch details for each Pokemon and append to the list
-    firstTen.forEach(async (pokemon) => {
+    for (let pokemon of firstTen) {
       let detailResponse = await fetch(pokemon.url);
       let detailData = await detailResponse.json();
 
@@ -29,7 +29,7 @@ button.addEventListener("click", async () => {
               Weight: ${detailData.weight}
             `;
       unorderedList.appendChild(li);
-    });
+    }
   } catch (error) {
     console.error("Error fetching Pokemon:", error);
   }
