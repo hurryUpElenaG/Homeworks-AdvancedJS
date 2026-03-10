@@ -1,0 +1,22 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  /*border: 1px solid black;*/
+  padding: 8px;
+  text-align: left;
+}
+
+form {
+    display:flex; 
+    flex-wrap:wrap;
+    gap:20px; 
+    align-items:center;
+    margin-bottom:10px;
+}
+
+#tableContainer {
+    margin: 20px;
+}

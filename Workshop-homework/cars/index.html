@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cars</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="src/style.css">
+</head>
+
+<body>
+
+  <div id="tableContainer">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm mb-3 px-3">
+    <form id="filterForm" class="d-flex flex-wrap align-items-center gap-2 w-100">
+
+      <select id="filterType" class="form-select form-select-sm w-auto">
+        <option value="">Type</option>
+      </select>
+
+      <select id="filterBrand" class="form-select form-select-sm w-auto">
+        <option value="">Brand</option>
+      </select>
+
+      <select id="filterGas" class="form-select form-select-sm w-auto">
+        <option value="">Gas</option>
+      </select>
+
+      <select id="filterColor" class="form-select form-select-sm w-auto">
+        <option value="">Color</option>
+      </select>
+
+      <input type="text" id="filterModel" class="form-control form-control-sm w-auto" placeholder="Model">
+
+      <input type="number" id="filterDoors" class="form-control form-control-sm w-auto" placeholder="Doors" min="1">
+
+      <input type="number" id="filterHP" class="form-control form-control-sm w-auto" placeholder="HP" min="0">
+
+      <div>
+        <label class="mb-0"><input type="radio" name="filterNew" value="new"> New</label>
+        <label class="mb-0"><input type="radio" name="filterNew" value="old"> Old</label>
+        <label class="mb-0"><input type="radio" name="filterNew" value="" checked> All</label>
+      </div>
+
+      <div>
+        <button id="searchBtn" type="button" class="btn btn-sm btn-primary">Search</button>
+        <button id="resetBtn" type="button" class="btn btn-sm btn-outline-secondary">Reset</button>
+      </div>
+
+    </form>
+  </nav>
+
+  <div id="carTableResult"></div>
+
+</div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <script src="src/app.js"></script>
+</body>
+
+</html>
